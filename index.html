@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>site-name</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <img onclick="onLinkClick1()" src="img/home_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-item" id>
+        <img onclick="onLinkClick2()" src="img/link_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-item">
+        <img onclick="onLinkClick3()" src="img/inbox_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-item">
+        <img onclick="onLinkClick4()" src="img/alternate_email_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-item">
+    </div>
+
+    <div class="nav-bar-mobile">
+        <img onclick="myFunction()" src="img/close_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-bar-close-block">
+        <img onclick="onLinkClick1()" src="img/home_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-item-mobile">
+        <img onclick="onLinkClick2()" src="img/link_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-item-mobile">
+        <img onclick="onLinkClick3()" src="img/inbox_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-item-mobile">
+        <img onclick="onLinkClick4()" src="img/alternate_email_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-item-mobile">
+    </div>
+
+    <img onclick="myFunction()" src="img/sort_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" class="nav-bar-block">
+
+    <div class="cookies-bar">
+        <div class="cookies-bar-text"><b><i>TOKYOTEST</i></b> uses cookies to provide you with a better experience, in accordance with our <span class="cookie-policy-prevent"><u>Cookie Policy.</u></span></div>
+        <div class="cookie-bar-spacer"></div>
+        <div class="cookies-bar-more-options">More options</div>
+        <div class="cookies-bar-reject">Reject all</div>
+        <div class="cookies-bar-accept">Accept all</div>
+    </div>
+
+    <script>
+        function myFunction() {
+  var x = document.querySelector(".nav-bar-mobile");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+let acceptDecline = localStorage.getItem("cookie") ? JSON.parse(localStorage.getItem("cookie")) : "";
+const cookiesBanner = document.querySelector(".cookies-bar")
+
+// localStorage.clear()
+
+document.querySelector(".cookies-bar-accept").addEventListener("click", () => {
+  setCookie()
+})
+
+document.querySelector(".cookies-bar-reject").addEventListener("click", () => {
+  setCookie()
+})
+
+function setCookie(){
+  acceptDecline = true
+  localStorage.setItem("cookie", JSON.stringify(acceptDecline))
+  cookiesBanner.style.display = "none"
+}
+
+if(acceptDecline){
+  cookiesBanner.style.display = "none"
+}
+
+function onLinkClick1() {
+  document.querySelector('.follow-us-page').scrollIntoView();
+  // will scroll to 4th h3 element
+}
+
+function onLinkClick2() {
+  document.querySelector('.links-page').scrollIntoView();
+  // will scroll to 4th h3 element
+}
+
+function onLinkClick3() {
+  document.querySelector('.coming-soon-app-page').scrollIntoView();
+  // will scroll to 4th h3 element
+}
+
+function onLinkClick4() {
+  document.querySelector('.contact-us-page').scrollIntoView();
+  // will scroll to 4th h3 element
+}
+    </script>
+    <div class="follow-us-page">
+        <div class="follow-us-page-flex">
+        <div class="follow-us-page-main-text">Discover Japan, word by word.</div>
+        <div class="follow-us-page-main-text-description"><i>Tokyo Test</i> makes learning Japanese easy with fun, <br>
+            interactive quizzes at your own pace.</div>
+        <a href="https://www.instagram.com/tokyotest_" target="_blank">
+            <div class="follow-us-page-block">Follow us!</div>
+        </a>
+        </div>
+
+    </div>
+    
+    <div class="links-page">
+        <div class="links-page-main-text">Important Links</div>
+        <div class="spacer-2"></div>
+        <a href="https://www.instagram.com/tokyotest_" target="_blank">
+            <div class="link-pages-card">
+                <div class="link-pages-card-title">Instagram</div>
+                <div class="link-pages-card-description">Join over 100,000 <br> mastering Japanese  <br> with fun, interactive  <br> quizzes!</div>
+                <img src="img/instagram.png" class="link-pages-card-icon">
+            </div> 
+        </a>
+        <a href="https://tokyotreat.com/?rfsn=7922638.29f938&fbclid=PAZXh0bgNhZW0CMTEAAaZx3eM_Ga46MCtVuV1_sQZzhlMHRquOyHBUbdZ18Y-c421vtlHkgzfOrec_aem_d96rbHBuStvfH5czlhqf1A_" target="_blank">
+            <div class="link-pages-card">
+                <div class="link-pages-card-title">Tokyo Treat</div>
+                <div class="link-pages-card-description">Check out our <br> partner TokyoTreat <br> and get $5 off your <br> first snack order</div>
+                <img src="img/tokyotreat.png" class="link-pages-card-icon">
+            </div> 
+        </a>
+        <a href="https://www.tiktok.com/@tokyotest_" target="_blank">
+            <div class="link-pages-card">
+                <div class="link-pages-card-title">TikTok</div>
+                <div class="link-pages-card-description">Stay tuned with our <br> daily content on <br> TikTok so you don't <br> miss a thing!</div>
+                <img src="img/tik-tok.png" class="link-pages-card-icon">
+            </div> 
+        </a>
+    </div>
+
+    <div class="coming-soon-app-page">
+        <div class="coming-soon-app-page-title">Coming soon on App Store & Google Play</div>
+    </div>
+
+    <div class="contact-us-page">
+        <div class="contact-us-page-title">Contact us!</div>
+        <div class="contact-us-page-description">Stay updated! Subscribe to our newsletter and be the first to know when our app is available.</div>
+        <a href="https://tokyos-newsletter-842e15.beehiiv.com/subscribe" target="_blank">
+            <div class="contact-us-page-block">Subscribe</div>
+        </a>
+        <div class="contact-us-page-alternative-mail">Or email us at <span><a href="mailto:info@tokyo-test.com">info@tokyo-test.com</a></span></div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-rights">© 2024 Tokyo Test. All rights reserved</div>
+        <div class="footer-title">Made by <span><a href="https://www.youtube.com/@AskizEditing" target="_blank">Askiz</a></span></div>
+    </div>
+</body>
+</html>

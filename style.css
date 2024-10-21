@@ -1,0 +1,1223 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+body {
+    background-color: var(--base);
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --base: #ffffff;
+    --base-content: #e3e3e3;
+
+    --nav-item-border: #eaeaea;
+    --nav-item-base: #f6f6f6;
+    --nav-item-mobile-border: #dedede;
+    --nav-item-mobile-base: #fafafa;
+
+    --cookie-accept-block: #f21a1a;
+    --cookie-accept-block-border: #d41919;
+    --cookie-accept-block-hover: #f6f6f6;
+
+    --dark: #000000;
+
+    --japan-main: #BC002D;
+
+}
+
+@media (min-width: 1280px) {
+    
+    .nav-bar-mobile {
+        display: none;
+        opacity: 0;
+    }
+
+    .nav-bar-close-block {
+        display: none;
+    }
+
+    .nav-bar-block {
+        display: none;
+    }
+    
+.nav-bar {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-bottom: 1px solid var(--base-content);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--base);
+}
+
+.nav-item {
+    height: 62.5%;
+    opacity: 0.5;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: 0.15s linear;
+}
+
+.nav-item:hover {
+    opacity: 0.8;
+    background-color: var(--nav-item-base);
+    border: 1px solid var(--nav-item-border);
+}
+
+.cookies-bar {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    border-top: 1px solid var(--base-content);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    backdrop-filter: blur(6px);
+}
+
+.cookies-bar-text {
+    font-family: 'Bricolage Grotesque';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--dark);
+}
+
+.cookie-bar-spacer {
+    flex-grow: 0.25;
+}
+
+.cookies-bar-more-options {
+    font-family: 'Bricolage Grotesque';
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--dark);
+    background-color: var(--base);
+    border-radius: 6px;
+    border: 1px solid var(--base-content);
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.cookies-bar-more-options:hover {
+    background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+}
+
+.cookies-bar-reject {
+    font-family: 'Bricolage Grotesque';
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--dark);
+    background-color: var(--base);
+    border-radius: 6px;
+    border: 1px solid var(--base-content);
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.cookies-bar-reject:hover {
+    background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+}
+
+.cookies-bar-accept {
+    font-family: 'Bricolage Grotesque';
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--base);
+    background-color: var(--cookie-accept-block);
+    border-radius: 6px;
+    border: 1px solid var(--cookie-accept-block-border);
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.cookies-bar-accept:hover {
+    background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+}
+
+.follow-us-page {
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    width: 100%;
+    height: 80vh;
+    z-index: -2;
+    background-color:#f21a1a0a;
+}
+
+.follow-us-page-flex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    justify-content: center;
+}
+
+.follow-us-page-main-text {
+    font-family: 'Bricolage Grotesque';
+    font-size: 44px;
+    font-weight: 700;
+    cursor: default;
+}
+
+.follow-us-page-flag-jp {
+    position: absolute;
+    height: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px 1.5px #bc002c15;
+}
+
+.follow-us-page-main-text-description {
+    font-family: 'Bricolage Grotesque';
+    font-size: 24px;
+    font-weight: 500;
+    cursor: default;
+    opacity: 0.5;
+}
+
+.follow-us-page-block {
+    margin-top: 16px;
+    color: var(--dark);
+    border: 2.5px solid #00000025;
+    width: fit-content;
+    height: fit-content;
+    padding: 4px 8px;
+    font-family: 'Bricolage Grotesque';
+    font-weight: 550;
+    font-size: 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.15s linear;
+    box-shadow: 0 2px #00000025;
+}
+
+.follow-us-page-block:hover {
+    box-shadow: 0 1px #00000025;
+    transform: translateY(1px);
+}
+
+.links-page {
+    position: absolute;
+    left: 0px;
+    top: calc(60px + 70vh);
+    background-color: var(--base);
+    height: 50vh;
+    width: 100%;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.links-page-main-text {
+    font-family: 'Bricolage Grotesque';
+    font-size: 36px;
+    font-weight: 700;
+    cursor: default;
+}
+
+.link-pages-card {
+    height: 280px;
+    width: 200px;
+    background-color: var(--nav-item-mobile-base);
+    border-radius: 20px;
+    border: 2px solid var(--nav-item-border);
+    box-shadow: 0 2px var(--nav-item-border);
+    transition: 0.15s linear;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    opacity: 0.6;
+}
+
+.link-pages-card:hover {
+    opacity: 1;
+    transform: rotate(1deg);
+}
+
+.spacer-2 {
+    flex-grow: 0.75;
+}
+
+.link-pages-card-title {
+    font-family: 'Bricolage Grotesque';
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.link-pages-card-description {
+    font-family: 'Bricolage Grotesque';
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--dark);
+    opacity: 0.5;
+    text-align: left;
+}
+
+.link-pages-card-icon {
+    height: 60px;
+    margin-top: 20px;
+}
+
+.coming-soon-app-page {
+    position: absolute;
+    left: 0px;
+    top: calc(60px + 70vh + 50vh);
+    height: 60vh;
+    width: 100%;
+    background-color: #f21a1a07;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.coming-soon-app-page-title {
+    font-family: 'Bricolage Grotesque';
+    font-size: 36px;
+    font-weight: 700;
+    cursor: default;
+    color: var(--dark);
+}
+
+.contact-us-page {
+    position: absolute;
+    left: 0px;
+    top: calc(60px + 70vh + 50vh + 60vh);
+    height: 25vh;
+    width: 100%;
+    background-color: var(--base);
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-us-page-title {
+    font-family: 'Bricolage Grotesque';
+    font-size: 28px;
+    font-weight: 650;
+    cursor: default;
+    color: var(--dark);
+}
+
+.contact-us-page-description {
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 500;
+    cursor: default;
+    color: var(--dark);
+    opacity: 0.4;
+    margin-top: 2px;
+}
+
+.contact-us-page-block {
+    font-family: 'Bricolage Grotesque';
+    background-color: var(--cookie-accept-block);
+    font-size: 20px;
+    font-weight: 550;
+    cursor: default;
+    color: var(--base);
+    margin-top: 6px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border: 1px solid var(--cookie-accept-block-border);
+    transition: 0.15s linear;
+}
+
+.contact-us-page-block:hover {
+    background-color: var(--cookie-accept-block-border);
+}
+
+.contact-us-page-alternative-mail {
+    font-family: 'Bricolage Grotesque';
+    font-size: 14px;
+    font-weight: 500;
+    cursor: default;
+    color: var(--dark);
+    opacity: 0.4;
+    margin-top: 2px; 
+    margin-top: 12px;
+}
+
+.footer {
+    position: absolute;
+    left: 0px;
+    top: calc(60px + 70vh + 50vh + 25vh + 60vh);
+    width: 100%;
+    height: 15vh;
+    background-color: #f21a1a0a;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 1px solid #a3000013;
+}
+
+.footer-rights {
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 500;
+    cursor: default;
+    color: var(--dark);
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+.footer-title {
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+    font-weight: 500;
+    cursor: default;
+    color: var(--dark);
+    opacity: 0.7;
+    margin-top: 4px; 
+}
+
+}
+
+@media (min-width: 768px ) and (max-width: 1280px) {
+
+    .nav-bar-mobile {
+        display: none;
+        opacity: 0;
+    }
+
+    .nav-bar-close-block {
+        display: none;
+    }
+
+    .nav-bar-block {
+        display: none;
+    }
+    
+    .nav-bar {
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        border-bottom: 1px solid var(--base-content);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: var(--base);
+    }
+    
+    .nav-item {
+        height: 62.5%;
+        opacity: 0.5;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 4px 8px;
+        cursor: pointer;
+        transition: 0.15s linear;
+    }
+    
+    .nav-item:hover {
+        opacity: 0.8;
+        background-color: var(--nav-item-base);
+        border: 1px solid var(--nav-item-border);
+    }
+    
+    .cookies-bar {
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        border-top: 1px solid var(--base-content);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        backdrop-filter: blur(6px);
+    }
+    
+    .cookies-bar-text {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--dark);
+        margin-left: 16px;
+    }
+    
+    .cookies-bar-more-options {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--dark);
+        background-color: var(--base);
+        border-radius: 6px;
+        border: 1px solid var(--base-content);
+        padding: 3px 6px;
+        cursor: pointer;
+        transition: 0.1s linear;
+        white-space: nowrap;
+    }
+    
+    .cookies-bar-more-options:hover {
+        background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+    }
+    
+    .cookies-bar-reject {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--dark);
+        background-color: var(--base);
+        border-radius: 6px;
+        border: 1px solid var(--base-content);
+        padding: 3px 6px;
+        cursor: pointer;
+        transition: 0.1s linear;
+        white-space: nowrap;
+    }
+    
+    .cookies-bar-reject:hover {
+        background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+    }
+    
+    .cookies-bar-accept {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--base);
+        background-color: var(--cookie-accept-block);
+        border-radius: 6px;
+        border: 1px solid var(--cookie-accept-block-border);
+        padding: 3px 6px;
+        cursor: pointer;
+        transition: 0.1s linear;
+        white-space: nowrap;
+    }
+    
+    .cookies-bar-accept:hover {
+        background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+    }
+
+    .follow-us-page {
+        position: absolute;
+        left: 0px;
+        top: 60px;
+        width: 100%;
+        height: 70vh;
+        z-index: -2;
+        background-color:#f21a1a0a;
+    }
+
+    .follow-us-page-flex {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        height: 90%;
+        width: 90%;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .follow-us-page-main-text {
+        font-family: 'Bricolage Grotesque';
+        font-size: 44px;
+        font-weight: 700;
+        cursor: default;
+    }
+    
+    .follow-us-page-flag-jp {
+        position: absolute;
+        height: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 12px;
+        border-radius: 6px;
+        box-shadow: 0 0 4px 1.5px #bc002c15;
+    }
+    
+    .follow-us-page-main-text-description {
+        font-family: 'Bricolage Grotesque';
+        font-size: 24px;
+        font-weight: 500;
+        cursor: default;
+        opacity: 0.5;
+    }
+    
+    .follow-us-page-block {
+        margin-top: 16px;
+        color: var(--dark);
+        border: 2.5px solid #00000025;
+        width: fit-content;
+        height: fit-content;
+        padding: 4px 8px;
+        font-family: 'Bricolage Grotesque';
+        font-weight: 550;
+        font-size: 22px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.15s linear;
+        box-shadow: 0 2px #00000025;
+    }
+    
+    .follow-us-page-block:hover {
+        box-shadow: 0 1px #00000025;
+        transform: translateY(1px);
+    }
+
+    .links-page {
+        position: absolute;
+        left: 0px;
+        top: calc(60px + 70vh);
+        background-color: var(--base);
+        height: 50vh;
+        width: 100%;
+        z-index: -2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+    
+    .links-page-main-text {
+        font-family: 'Bricolage Grotesque';
+        font-size: 36px;
+        font-weight: 700;
+        cursor: default;
+    }
+    
+    .link-pages-card {
+        height: 280px;
+        width: 200px;
+        background-color: var(--nav-item-mobile-base);
+        border-radius: 20px;
+        border: 2px solid var(--nav-item-border);
+        box-shadow: 0 2px var(--nav-item-border);
+        transition: 0.15s linear;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        opacity: 0.6;
+    }
+    
+    .link-pages-card:hover {
+        opacity: 1;
+        transform: rotate(1deg);
+    }
+    
+    .spacer-2 {
+        flex-grow: 0.75;
+    }
+    
+    .link-pages-card-title {
+        font-family: 'Bricolage Grotesque';
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--dark);
+    }
+    
+    .link-pages-card-description {
+        font-family: 'Bricolage Grotesque';
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--dark);
+        opacity: 0.5;
+        text-align: left;
+    }
+    
+    .link-pages-card-icon {
+        height: 60px;
+        margin-top: 20px;
+    }
+    
+    .coming-soon-app-page {
+        position: absolute;
+        left: 0px;
+        top: calc(60px + 70vh + 50vh);
+        height: 50vh;
+        width: 100%;
+        background-color: #f21a1a07;
+        z-index: -2;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    
+    .coming-soon-app-page-title {
+        font-family: 'Bricolage Grotesque';
+        font-size: 36px;
+        font-weight: 700;
+        cursor: default;
+        color: var(--dark);
+    }
+    
+    .contact-us-page {
+        position: absolute;
+        left: 0px;
+        top: calc(60px + 70vh + 50vh + 50vh);
+        height: 25vh;
+        width: 100%;
+        background-color: var(--base);
+        z-index: -2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .contact-us-page-title {
+        font-family: 'Bricolage Grotesque';
+        font-size: 28px;
+        font-weight: 650;
+        cursor: default;
+        color: var(--dark);
+    }
+    
+    .contact-us-page-description {
+        font-family: 'Bricolage Grotesque';
+        font-size: 16px;
+        font-weight: 500;
+        cursor: default;
+        color: var(--dark);
+        opacity: 0.4;
+        margin-top: 2px;
+    }
+    
+    .contact-us-page-block {
+        font-family: 'Bricolage Grotesque';
+        background-color: var(--cookie-accept-block);
+        font-size: 20px;
+        font-weight: 550;
+        cursor: default;
+        color: var(--base);
+        margin-top: 6px;
+        padding: 4px 8px;
+        border-radius: 8px;
+        margin-top: 8px;
+        cursor: pointer;
+        border: 1px solid var(--cookie-accept-block-border);
+        transition: 0.15s linear;
+    }
+    
+    .contact-us-page-block:hover {
+        background-color: var(--cookie-accept-block-border);
+    }
+    
+    .contact-us-page-alternative-mail {
+        font-family: 'Bricolage Grotesque';
+        font-size: 14px;
+        font-weight: 500;
+        cursor: default;
+        color: var(--dark);
+        opacity: 0.4;
+        margin-top: 2px; 
+        margin-top: 12px;
+    }
+    
+    .footer {
+        position: absolute;
+        left: 0px;
+        top: calc(60px + 70vh + 50vh + 25vh + 50vh);
+        width: 100%;
+        height: 15vh;
+        background-color: #f21a1a0a;
+        z-index: -2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-top: 1px solid #a3000013;
+    }
+    
+    .footer-rights {
+        font-family: 'Bricolage Grotesque';
+        font-size: 18px;
+        font-weight: 500;
+        cursor: default;
+        color: var(--dark);
+        opacity: 0.7;
+        margin-top: 4px;
+    }
+    
+    .footer-title {
+        font-family: 'Bricolage Grotesque';
+        font-size: 18px;
+        font-weight: 500;
+        cursor: default;
+        color: var(--dark);
+        opacity: 0.7;
+        margin-top: 4px; 
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-bar-mobile {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 80%;
+        background-color: var(--base);
+        border-left: 1px solid var(--base-content);
+        z-index: 300;
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+        display: none;
+        gap: 12px;
+    }
+
+    .nav-bar-block {
+        position: fixed;
+        top: 8px;
+        left: 8px;
+        border-radius: 12px;
+        background-color: var(--base);
+        border: 1px solid var(--base-content);
+        transition: 0.1s linear;
+        height: 32px;
+        opacity: 0.5;
+        padding: 4px 4px;
+        cursor: pointer;
+        transition: 0.15s linear;
+        z-index: 9999;
+    }
+
+    .nav-bar-block:hover {
+        opacity: 0.7;
+    }
+
+    .nav-bar-close-block {
+        border-radius: 12px;
+        background-color: var(--base);
+        border: 1px solid var(--base-content);
+        transition: 0.1s linear;
+        height: 32px;
+        opacity: 0.5;
+        padding: 4px 4px;
+        cursor: pointer;
+        transition: 0.15s linear;
+        margin-top: 16px;
+        margin-left: auto;
+        margin-right: 16px;
+    }
+
+    .nav-bar-close-block:hover {
+        background-image: linear-gradient(rgb(0 0 0/2.5%) 0 0);
+        opacity: 0.7;
+    }
+
+    .nav-item-mobile {
+        height: 32px;
+        padding: 6px 35%;
+        background-color: var(--nav-item-mobile-base);
+        opacity: 0.4;
+        border: 1px solid var(--nav-item-mobile-border);
+        transition: 0.15s linear;
+        border-radius: 10px;
+    }
+
+    .nav-item-mobile:hover {
+        opacity: 0.8;
+    }
+
+    .cookies-bar {
+        position: fixed;
+        height: 180px;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        border-top: 1px solid var(--base-content);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        backdrop-filter: blur(8px);
+        flex-direction: column;
+    }
+    
+    .cookies-bar-text {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 13px;
+        color: var(--dark);
+        margin-left: 8px;
+        vertical-align: top;
+    }
+    
+    .cookies-bar-more-options {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--dark);
+        background-color: var(--base);
+        border-radius: 6px;
+        border: 1px solid var(--base-content);
+        padding: 4px 32%;
+        cursor: pointer;
+        transition: 0.1s linear;
+        white-space: nowrap;
+    }
+    
+    .cookies-bar-more-options:hover {
+        background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+    }
+    
+    .cookies-bar-reject {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--dark);
+        background-color: var(--base);
+        border-radius: 6px;
+        border: 1px solid var(--base-content);
+        padding: 4px 35%;
+        cursor: pointer;
+        transition: 0.1s linear;
+        white-space: nowrap;
+    }
+    
+    .cookies-bar-reject:hover {
+        background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+    }
+    
+    .cookies-bar-accept {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--base);
+        background-color: var(--cookie-accept-block);
+        border-radius: 6px;
+        border: 1px solid var(--cookie-accept-block-border);
+        padding: 4px 34.5%;
+        cursor: pointer;
+        transition: 0.1s linear;
+        white-space: nowrap;
+    }
+    
+    .cookies-bar-accept:hover {
+        background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+    }
+
+    .follow-us-page {
+        position: absolute;
+        left: 0px;
+        top: 60px;
+        width: 100%;
+        height: 60vh;
+        z-index: -2;
+        background-color:#f21a1a0a;
+    }
+
+    .follow-us-page-flex {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        height: 90%;
+        width: 90%;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .follow-us-page-main-text {
+        font-family: 'Bricolage Grotesque';
+        font-size: 44px;
+        font-weight: 700;
+        cursor: default;
+    }
+    
+    .follow-us-page-flag-jp {
+        display: none;
+    }
+    
+    .follow-us-page-main-text-description {
+        font-family: 'Bricolage Grotesque';
+        font-size: 24px;
+        font-weight: 500;
+        cursor: default;
+        opacity: 0.5;
+    }
+    
+    .follow-us-page-block {
+        margin-top: 16px;
+        color: var(--dark);
+        border: 2.5px solid #00000025;
+        width: fit-content;
+        height: fit-content;
+        padding: 4px 8px;
+        font-family: 'Bricolage Grotesque';
+        font-weight: 550;
+        font-size: 22px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.15s linear;
+        box-shadow: 0 2px #00000025;
+    }
+    
+    .follow-us-page-block:hover {
+        box-shadow: 0 1px #00000025;
+        transform: translateY(1px);
+    }
+    
+    .spacer-2 {
+        flex-grow: 0;
+    }
+
+    .links-page {
+        position: absolute;
+        left: 0px;
+        top: calc(60px + 65vh);
+        background-color: var(--base);
+        height: 50vh;
+        width: 100%;
+        z-index: -2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+    
+    .links-page-main-text {
+        font-family: 'Bricolage Grotesque';
+        font-size: 0px;
+        font-weight: 700;
+        cursor: default;
+    }
+    
+    .link-pages-card {
+        height: 200px;
+        width: 128px;
+        background-color: var(--nav-item-mobile-base);
+        border-radius: 20px;
+        border: 2px solid var(--nav-item-border);
+        box-shadow: 0 2px var(--nav-item-border);
+        transition: 0.15s linear;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        opacity: 0.6;
+    }
+    
+    .link-pages-card:hover {
+        opacity: 1;
+        transform: rotate(1deg);
+    }
+    
+    .spacer-2 {
+        display: none;
+    }
+    
+    .link-pages-card-title {
+        font-family: 'Bricolage Grotesque';
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--dark);
+        
+    }
+    
+    .link-pages-card-description {
+        font-family: 'Bricolage Grotesque';
+        font-size: 11px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--dark);
+        opacity: 0.5;
+        text-align: left;
+        text-align: center;
+    }
+    
+    .link-pages-card-icon {
+        height: 44px;
+        margin-top: 20px;
+    }
+    
+    .coming-soon-app-page {
+        position: absolute;
+        left: 0px;
+        top: calc(60px + 70vh + 50vh);
+        height: 50vh;
+        width: 100%;
+        background-color: #f21a1a07;
+        z-index: -2;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    
+    .coming-soon-app-page-title {
+        font-family: 'Bricolage Grotesque';
+        font-size: 24px;
+        font-weight: 750;
+        cursor: default;
+        color: var(--dark);
+    }
+    
+    .contact-us-page {
+        position: absolute;
+        left: 0px;
+        top: calc(60px + 70vh + 50vh + 50vh);
+        height: 25vh;
+        width: 100%;
+        background-color: var(--base);
+        z-index: -2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .contact-us-page-title {
+        font-family: 'Bricolage Grotesque';
+        font-size: 28px;
+        font-weight: 650;
+        cursor: default;
+        color: var(--dark);
+    }
+    
+    .contact-us-page-description {
+        font-family: 'Bricolage Grotesque';
+        font-size: 13px;
+        font-weight: 500;
+        cursor: default;
+        color: var(--dark);
+        opacity: 0.4;
+        margin-top: 2px;
+    }
+    
+    .contact-us-page-block {
+        font-family: 'Bricolage Grotesque';
+        background-color: var(--cookie-accept-block);
+        font-size: 20px;
+        font-weight: 550;
+        cursor: default;
+        color: var(--base);
+        margin-top: 6px;
+        padding: 4px 8px;
+        border-radius: 8px;
+        margin-top: 8px;
+        cursor: pointer;
+        border: 1px solid var(--cookie-accept-block-border);
+        transition: 0.15s linear;
+    }
+    
+    .contact-us-page-block:hover {
+        background-color: var(--cookie-accept-block-border);
+    }
+    
+    .contact-us-page-alternative-mail {
+        font-family: 'Bricolage Grotesque';
+        font-size: 14px;
+        font-weight: 500;
+        cursor: default;
+        color: var(--dark);
+        opacity: 0.4;
+        margin-top: 2px; 
+        margin-top: 12px;
+    }
+    
+    .footer {
+        position: absolute;
+        left: 0px;
+        top: calc(60px + 70vh + 50vh + 25vh + 50vh);
+        width: 100%;
+        height: 15vh;
+        background-color: #f21a1a0a;
+        z-index: -2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-top: 1px solid #a3000013;
+    }
+    
+    .footer-rights {
+        font-family: 'Bricolage Grotesque';
+        font-size: 18px;
+        font-weight: 500;
+        cursor: default;
+        color: var(--dark);
+        opacity: 0.7;
+        margin-top: 4px;
+    }
+    
+    .footer-title {
+        font-family: 'Bricolage Grotesque';
+        font-size: 18px;
+        font-weight: 500;
+        cursor: default;
+        color: var(--dark);
+        opacity: 0.7;
+        margin-top: 4px; 
+    }
+    
+}
+
+.cookie-policy-prevent {
+    cursor: pointer;
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        top: 60px;
+    }
+    100% {
+        opacity: 1;
+        top: 72px;
+    }
+}

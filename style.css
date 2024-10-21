@@ -893,7 +893,7 @@ a {
         align-items: center;
         justify-content: center;
         gap: 8px;
-        background-color: var(--base);
+        backdrop-filter: blur(14px);
         flex-direction: column;
     }
     
@@ -1148,6 +1148,7 @@ a {
         font-weight: 650;
         cursor: default;
         color: var(--dark);
+        text-align: center;
     }
     
     .contact-us-page-description {
@@ -1158,6 +1159,7 @@ a {
         color: var(--dark);
         opacity: 0.4;
         margin-top: 2px;
+        text-align: center;
     }
     
     .contact-us-page-block {

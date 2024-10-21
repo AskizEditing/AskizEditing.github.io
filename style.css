@@ -219,6 +219,12 @@ a {
     transform: translateY(1px);
 }
 
+.follow-us-page-mascotte {
+    position: absolute;
+    height: 75%;
+    right: 5%;
+}
+
 .links-page {
     position: absolute;
     left: 0px;
@@ -600,6 +606,13 @@ a {
     .follow-us-page-block:hover {
         box-shadow: 0 1px #00000025;
         transform: translateY(1px);
+    }
+
+    .follow-us-page-mascotte {
+        position: absolute;
+        height: 60%;
+        right: 0%;
+        bottom: 0%;
     }
 
     .links-page {
@@ -1008,6 +1021,13 @@ a {
     .follow-us-page-block:hover {
         box-shadow: 0 1px #00000025;
         transform: translateY(1px);
+    }
+
+    .follow-us-page-mascotte {
+        position: absolute;
+        height: 40%;
+        right: 0%;
+        bottom: 0%;
     }
     
     .spacer-2 {

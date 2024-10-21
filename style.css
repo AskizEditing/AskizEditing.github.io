@@ -893,7 +893,7 @@ a {
         align-items: center;
         justify-content: center;
         gap: 8px;
-        backdrop-filter: blur(14px);
+        background-color: var(--base);
         flex-direction: column;
     }
     
